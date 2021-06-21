@@ -13,7 +13,7 @@ html,body {width: 100%; height: 100vh; margin: auto;}
 .main-section .menu-wrapper {display: flex; justify-content: flex-end;}
 .main-section .menu-wrapper li { font-size: 1em; padding: 1.75em; cursor: pointer;}
 
-.main-section {position: relative;}
+.main-section .main-wrap {position: relative;}
 
 .main-section .main-wrap .title-wrapper {position: absolute; padding: 5em;}
 .main-section .main-wrap .title-wrapper h1 {font-size: 3em; font-weight: Bold 700;}
