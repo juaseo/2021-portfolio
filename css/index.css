@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400&display=swap');
+/* font-family: 'Cormorant Garamond', serif; */
+/* font-family: 'Gothic A1', sans-serif; */
+/********************** 글로벌 설정 *********************/
+html,body {width: 100%; height: 100vh; margin: auto;}
+.wrapper {}
+.title {font-family: 'Cormorant Garamond', serif;}
+.content {font-family: 'Gothic A1', sans-serif;}
+
+/********************** main-section *********************/
+.main-section {}
+.main-section .menu-wrapper {display: flex; justify-content: flex-end; }
+.main-section .menu-wrapper li { font-size: 1em; margin: 2em; padding: .25em; }
+
+.main-section {position: relative; border: 1px solid red;}
+
+.main-section .title-wrapper {position: absolute; padding: 5em; border: 1px solid purple;}
+.main-section .title-wrapper h1 {font-size: 3em; font-weight: Bold 700;}
+.main-section .title-wrapper h2 {font-size: 4em; font-weight: Bold 500; padding-left: 1em;}
+.main-section .title-wrapper p {font-weight: 200; padding: 2.5em 0; color: #555; line-height: 1.5em;}
+.main-section .title-wrapper .bt-change {width: 90px; height: 30px; border-radius: 8px; background-color: #328bff; color: #fff; right: 0;}
+.main-section .title-wrapper .bt-change:hover {background-color: #fff; color: #328bff;}
+
+.main-section .ai-wrapper {position: relative; border: 1px solid orange;}
+.main-section .ai-wrapper .box {}
+.main-section .ai-wrapper img {position: absolute; display: flex; justify-content: flex-end;}
+.main-section .ai-wrapper .a {border: 1px solid royalblue; top: 10em}
+.main-section .ai-wrapper .b {border: 1px solid green;}
+
+
+
+/********************** about-section *********************/
+/********************** navi-section *********************/
+/********************** project-section *********************/
+/********************** contact-section *********************/
+
+
+/********************** 반응형 설정 *********************/
+@media (max-width: 1399px) {
+	
+}
+
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+	
+}
+
+@media (max-width: 767px) {
+	
+}
+
+@media (max-width: 575px) {
+	
+}
