@@ -5,23 +5,31 @@
 /* font-family: 'Gothic A1', sans-serif; */
 /* font-family: 'Nunito Sans', sans-serif; */
 /********************** 글로벌 설정 *********************/
-html,body {width: 100%; height: 100vh; margin: auto;}
+html,body {width: 100%; height: 100vh; margin: auto; -ms-overflow-style:none;}
+body::-webkit-scrollbar { display:none; }
+section {width: 100%;	height: 100vh;}
+
+
 .wrapper {}
-.title {font-family: 'Nunito Sans', sans-serif; font-style: italic; font-weight: 400; color: rgb(68, 37, 126);}
-.content {font-family: 'Gothic A1', sans-serif;}
+/* .title {font-family: 'Nunito Sans', sans-serif; font-style: italic; font-weight: 400; color: rgb(68, 37, 126);} */
+.title { font-family:'Gill Sans MT', sans-serif; font-weight: 500; color: #43206b;}
+.cont {font-family: 'Gothic A1', sans-serif;}
 
 /********************** main-section *********************/
 .main-section {}
 .main-section .menu-wrapper {display: flex; justify-content: flex-end;}
 .main-section .menu-wrapper li { font-size: 1.325em; padding: 1.75em; cursor: pointer;}
+.main-section .menu-wrapper li:hover {color: #dea2ec}
 
 .main-wrapper {position: relative; height: calc(100vh - 72px);}
 .main-wrapper .bg-wrap {position: absolute; top: 30%;}
 .main-wrapper .cont-wrap {position: relative; width: 100%; height: 100%; display: flex; flex-wrap: wrap;}
 
 .main-wrapper .cont-wrap .title-wrapper {padding: 5em 0 5em 8em; width: 40%;}
-.main-wrapper .cont-wrap .title-wrapper h1 {font-size: 2em; font-weight: 700; margin-bottom: .5em;}
-.main-wrapper .cont-wrap .title-wrapper h2 {font-size: 3em; font-weight: 500; padding-left: 1em;}
+.main-wrapper .cont-wrap .title-wrapper .title-main {opacity: 100; transition: all 2s}
+
+.main-wrapper .cont-wrap .title-wrapper h1 {font-size: 3em; margin-bottom: .5em;}
+.main-wrapper .cont-wrap .title-wrapper h2 {font-size: 4em; padding: 0 0 .75em 1em;}
 .main-wrapper .cont-wrap .title-wrapper p {font-weight: 200; padding: 2.5em 0; color: #555; line-height: 1.5em; font-size: 1em;}
 .main-wrapper .cont-wrap .title-wrapper .bt-change {width: 130px; height: 40px; border-radius: 8px; background-color: #328bff; color: #fff; font-size: 1.5em; margin-left: 15em;}
 .main-wrapper .cont-wrap .title-wrapper .bt-change:hover {background-color: #fff; color: #328bff;}
@@ -40,10 +48,24 @@ html,body {width: 100%; height: 100vh; margin: auto;}
 
 
 /********************** about-section *********************/
+.about-wrapper {position: relative;}
+.about-wrapper .about-bg {position: absolute; width: 100%; height: 100vh; right: -100%; background-color: #ffe9e9;}
+.about-wrapper .about-bg .active {translate: 0, 100%; transition: all 3s;}
+
+
+
 /********************** navi-section *********************/
 /********************** project-section *********************/
 /********************** contact-section *********************/
 /********************** navbar-section *********************/
+.navbar {position: fixed; z-index: 999; top: 50%; right: 15px; transform: translateY(-50%); }
+.navbar .nav-menu li {position: relative; text-align: right; margin: 1.75em; }
+.navbar .nav-menu li .dot::after {display: block;position: absolute; content: ''; border-radius: 20%; top: 50%; transition: all .3s ease;}
+.navbar .nav-menu li .dot::after {width: 15px;height: 15px; background-color:#f1f1f1; right: 0px; transform: rotate(90deg);}
+.navbar .nav-menu li .dot.active::after,
+.navbar .nav-menu li:hover .dot::after {background-color:#fddbdb; transform: rotate(0);}
+
+
 
 /********************** 반응형 설정 *********************/
 @media (max-width: 1399px) {
