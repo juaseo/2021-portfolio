@@ -49,7 +49,7 @@ section {width: 100%;	height: 100vh;}
 
 /********************** about-section *********************/
 .about-wrapper {position: relative;}
-.about-wrapper .about-bg {position: absolute; width: 100%; height: 100vh; right: -100%; background-color: #ffe9e9;}
+.about-wrapper .about-bg {position: absolute; width: 100%; height: 100vh; right: 0; background-color: #ffe9e9;}
 .about-wrapper .about-bg .active {translate: 0, 100%; transition: all 3s;}
 
 

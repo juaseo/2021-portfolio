@@ -47,31 +47,31 @@ $(document).ready(function(){
 
 /*  nav  */
 
-$(function(){
-	var link = $('#navbar a.dot');
 
-	link.on('click',function(e){
-		var target = $($(this).attr('href'));
+var link = $('#navbar a.dot');
 
-		$('html, body').animate({ scrollTop: target.offset().top },600);
-		$(this).addClass('active');
-		e.preventDefault();
-	});
-	
-	$(window).on('scroll',function(){
-		findPosition();
-	});
+link.on('click',function(e){
+	var target = $($(this).attr('href'));
 
-	function findPosition(){
-		$('section').each(function(){
-			if( ($(this).offset().top - $(window).scrollTop() ) < 20){
-				link.removeClass('active');
-				$('#navbar').find('[data-scroll="'+ $(this).attr('id') +'"]').addClass('active');
-			}
-		});
-	}
+	$('html, body').animate({ scrollTop: target.offset().top },600);
+	$(this).addClass('active');
+	e.preventDefault();
+});
+
+$(window).on('scroll',function(){
 	findPosition();
 });
+
+function findPosition(){
+	$('section').each(function(){
+		if( ($(this).offset().top - $(window).scrollTop() ) < 20){
+			link.removeClass('active');
+			$('#navbar').find('[data-scroll="'+ $(this).attr('id') +'"]').addClass('active');
+		}
+	});
+}
+findPosition();
+
 
 
 
