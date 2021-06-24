@@ -31,16 +31,6 @@ function loop() {
 	if(oldMx !== mx || oldMy !== my) window.requestAnimationFrame(loop);
 }
 
-/*
-$('.about-wrapper').scroll(function () {
-	var scrollT = $(this).scrollTop();
-	var scrollH = $(this).height();
-	var contentH = $('.about-wrap').height();
-	if (scrollT + scrollH + 1 >= contentH) {
-		$('.about-bg').addClass('.active');
-	}
-});
-*/
 
 /*  nav  */
 var link = $('#navbar a.dot')
@@ -53,7 +43,7 @@ link.on('click', function (e) {
 
 $(window).on('scroll', function () {
 	findPosition();
-	projectPage();
+	aboutPage();
 }).trigger('scroll')
 
 function findPosition() {
@@ -65,44 +55,23 @@ function findPosition() {
 	});
 }
 
-function projectPage() {
+function aboutPage() {
 	var bodyHeight = $('html, body').outerHeight();
 	var scrollTop = $(window).scrollTop();
 	var pct =  scrollTop / bodyHeight * 100 * $('.section-wrapper').length;
-	console.log('pct', pct);
+	// console.log('pct', pct);
 	$('.section-wrapper').each(function(i){
 		var myPct = 100* i - pct;
 		if(myPct < 0) myPct = 0;
-		if(i === 1) console.log('myPct', myPct)
+		// if(i === 1) console.log('myPct', myPct)
 		$(this).find('.section').css('transform', 'translateX('+myPct+'%)')
 	})
 }
 
 
-function slideNavi() {
-	var $navi = $('.navi-section');
-	var $slick = $navi.find('.slide-wrapper');
-	var $btPrev = $navi.find('.bt-slide.left');
-	var $btNext = $navi.find('.bt-slide.right');
-	var options = cloneObject($slick);
-	var lastIdx;
-	
-	function onGetData(r) {
-		lastIdx = r.navi.length - 1;
-		r.navi.forEach(function (v, i) {
-			var html = '';
-			html += '<li class="slide" title="' + i + '">';
-			html += '<div class="img-wrap">';
-			html += '<img src="' + v.src + '" alt="navi" class="w-100">';
-			html += '</div>';
-			html += '<h4 class="title">' + v.title + '</h4>';
-			html += '</li>';
-			$slick.append(html);
-		})
-	}
-	
-	$.get('../json/navi.json', onGetData);
-}
+
+
+
 
 
 /*************** 이벤트 등록 *****************/
