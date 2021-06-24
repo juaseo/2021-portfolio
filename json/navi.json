@@ -1,0 +1,7 @@
+{
+	"svc": [
+		{ "id": 1, "title": "주얼리 사이트", "src": "../img/01.png", "link": "#" },
+		{ "id": 2, "title": "패션 사이트", "src": "../img/02.png", "link": "#" },
+		{ "id": 3, "title": "슈즈 사이트", "src": "../img/03.png", "link": "#" }
+	]
+}
