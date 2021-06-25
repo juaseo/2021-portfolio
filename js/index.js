@@ -69,6 +69,13 @@ function aboutPage() {
 }
 
 
+$('.bt-hide').click(function(){
+	$('.slide-wrapper').addClass('active')
+})
+
+$('.bt-show').click(function(){
+	$('.slide-wrapper').removeClass('active')
+})
 
 
 

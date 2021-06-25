@@ -1,7 +1,0 @@
-.section-wrapper {height: 100vh; border: 1px solid black;}
-.section-wrapper > .section {width: 100%; height: 100vh; transform: translateX(100%)}
-.section-wrapper > .section1 {background-color: #007aff;}
-.section-wrapper > .section2 {background-color: #00ff7b;}
-.section-wrapper > .section3 {background-color: #b3ff00;}
-.section-wrapper > .section4 {background-color: #f80;}
-.section-wrapper > .section5 {background-color: #f09;}
