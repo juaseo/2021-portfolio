@@ -18,13 +18,13 @@ body::-webkit-scrollbar { display:none; }
 .title {font-family: 'Roboto', sans-serif; font-weight: 400; font-style: italic; color: #43206b; font-size: 3.5em;}
 .cont {font-family: 'Gothic A1', sans-serif; font-weight: 300; padding: 1em; color: #555; line-height: 1.5em; font-size: 1em;}
 .bt {width: 130px; height: 40px; border-radius: 8px; background-color: #328bff; color: #fff; font-size: 1.5em; margin-left: 15em;}
-.bt:hover {background-color: #fff; color: #328bff; animation-name: bt; animation-duration: .5s; animation-iteration-count: infinite; animation-direction: alternate;;}
+.bt:hover {background-color: #fff; color: #328bff; animation-name: bt; animation-duration: .5s; animation-iteration-count: infinite; animation-direction: alternate;}
 
 
 /********************** main-section *********************/
 .main-section {}
 .main-section .menu-wrapper {display: flex; justify-content: flex-end;}
-.main-section .menu-wrapper li { font-size: 1.325em; font-weight: 400; color: #616161; padding: 1.75em; cursor: pointer;}
+.main-section .menu-wrapper li { font-size: 1.325em; font-weight: 400; color: #616161; padding: 1.25em; cursor: pointer;}
 .main-section .menu-wrapper li:hover {color: #43206b; animation-name: bt; animation-duration: .5s; animation-iteration-count: infinite; animation-direction: alternate;}
 
 .main-wrapper {position: relative; height: calc(100vh - 72px);}
@@ -34,7 +34,7 @@ body::-webkit-scrollbar { display:none; }
 .main-wrapper .cont-wrap .title-wrapper {padding: 5em 0 5em 8em; width: 40%;}
 .main-wrapper .cont-wrap .title-wrapper .title-main {opacity: 100; transition: all 2s}
 
-.main-wrapper .cont-wrap .title-wrapper h1 {font-style: normal; font-size: 3em; margin-bottom: .5em;}
+.main-wrapper .cont-wrap .title-wrapper h1 {font-style: normal; font-size: 3em; margin-bottom: .5em; animation-name: h1; animation-duration: .5s; animation-direction: normal;}
 .main-wrapper .cont-wrap .title-wrapper h2 {font-size: 4.5em; padding: 0 0 .75em 1em;}
 .main-wrapper .cont-wrap .title-wrapper p {font-weight: 200; padding: 1em; color: #555; line-height: 1.5em; font-size: 1em;}
 
@@ -58,18 +58,30 @@ body::-webkit-scrollbar { display:none; }
 
 
 
-/********************** navi-section *********************/
-.navi-section {}
-.navi-section .title-wrapper .title {text-align: center; padding: .5em 0;}
-.navi-section .text-wrapper {border: 1px solid red; width: 30%;}
-.navi-section .text-wrapper .title-sub { padding: .325em; font-weight: 400; color: #43206b; font-size: 3em;}
-.navi-section .text-wrapper .bt {margin-left: 7em;}
+/********************** slide-section *********************/
+.slide-section .menu-wrapper {display: flex; justify-content: flex-end;}
+.slide-section .menu-wrapper li { font-size: 1.325em; font-weight: 400; color: #616161; padding: 1.25em; cursor: pointer;}
+.slide-section .menu-wrapper li:hover {color: #43206b; animation-name: bt; animation-duration: .5s; animation-iteration-count: infinite; animation-direction: alternate;}
+
+.slide-section .slide-wrapper {position: relative; width: 100%; height: calc(100vh - 72px); border: 2px solid green; display: flex;}
+.slide-section .slide-wrapper .title-wrapper {width: 35%; height: 60%; padding: 3em 0 3em 5em; margin-top: 15%;}
+.slide-section .slide-wrapper .title-wrapper h2 {font-size: 3em; padding: 0.5em; color: #777;}
+.slide-section .slide-wrapper .title-wrapper p {font-weight: 200; padding: 1em; color: #555; line-height: 1.5em; font-size: 1em;}
+.slide-section .slide-wrapper .title-wrapper .bt {margin: 1em 0 0 9em;}
+
+.slide-section .slide-wrapper .img-wrapper {width: 65%; height: 100%; position: relative; border: 2px solid blue;}
+.slide-section .slide-wrapper .img-wrapper .front {position: relative;}
+.slide-section .slide-wrapper .img-wrapper > .box2 {width: 300px; height: 300px; position: absolute; background-color: #ecd9f1; transform: rotate(30deg);}
+.slide-wrapper .img-wrapper > .pic-wrapper {position: relative;}
+.slide-wrapper .img-wrapper > .pic-wrapper .pic-wrap {position: relative;}
+.slide-wrapper .img-wrapper > .pic-wrapper .pic-wrap .pic-bg {position: absolute; left: 20%; top: 50%;}
+
 
 /********************** project-section *********************/
 /********************** contact-section *********************/
 /********************** navbar-section *********************/
 .navbar {position: fixed; z-index: 999; top: 50%; right: 15px; transform: translateY(-50%); }
-.navbar .nav-menu li {position: relative; text-align: right; margin: 1.75em; }
+.nav-menu li {position: relative; text-align: right; margin: 1.75em; }
 .navbar .nav-menu li .dot::after {display: block;position: absolute; content: ''; border-radius: 20%; top: 50%; transition: all .3s ease;}
 .navbar .nav-menu li .dot::after {width: 15px;height: 15px; background-color:#f1f1f1; right: 0px; transform: rotate(90deg);}
 .navbar .nav-menu li .dot.active::after,

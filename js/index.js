@@ -11,7 +11,7 @@ var winHei = 0;
 
 
 /*************** 사용자 함수 *****************/
-// slideNavi();
+// slideslide();
 
 /*  main  */
 $(window).mousemove(function (e) {
