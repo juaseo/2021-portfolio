@@ -69,13 +69,51 @@ function aboutPage() {
 }
 
 
-$('.bt-hide').click(function(){
+$('.bt').click(function(){
 	$('.slide-wrapper').addClass('active')
 })
 
 $('.bt-show').click(function(){
 	$('.slide-wrapper').removeClass('active')
 })
+
+
+function slide() {
+	
+	var slide = [], swiper;
+	var $slide = $('slide-section');
+	var $slick = $slide.find('.slide-wrapper');
+	var $movingBox = $('.slide-wrapper .title-wrapper .moving-box, .slide-wrapper .img-wrapper .moving-box');
+	var $title = $('.slide-wrapper .title-wrapper .title-sub');
+	var $cont = $('.slide-wrapper .title-wrapper .cont-sub');
+	var $btPrev = $slide.find('.bt-prev');
+	var $btNext = $slide.find('.bt-next');
+
+
+	function onGetData(r) {
+		slide = r.slide.slice();
+		$(window).trigger('resize');
+
+		$slick.on('beforeChange', onBefore);
+		$slick.on('afterChange', onAfter);
+		showDesc(0);
+	}
+
+	function onBefore() {
+		$movingBox.removeClass('active');
+	}
+
+	function onAfter(e, slick, idx) {
+		showDesc(idx);
+	}
+
+	function showDesc(n) {
+		$title.text(slide[n].title);
+		$cont.text(slide[n].cont);
+		$movingBox.addClass('active');
+	}
+	$.get('../json/slide.json', onGetData);
+}
 
 
 
