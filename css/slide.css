@@ -19,7 +19,7 @@
 .slide-wrapper .bt-show {transition: all .55s; transition-delay: .225s;}
 .slide-wrapper .img-back {transition: all .55s;}
 .slide-wrapper .box {transition: all .55s; transition-delay: .225s;}
-.slide-wrapper .img-front {transition: all .55s; transition-delay: .125s;}
+.slide-wrapper .img-front {transition: all .55s; transition-delay: .125s; transform: 2s;}
 
 .slide-wrapper.active .title {transform: translateX(-50vw);}
 .slide-wrapper.active .content {transform: translateX(-50vw);}
@@ -27,3 +27,5 @@
 .slide-wrapper.active .img-back {transform: translateX(50vw);}
 .slide-wrapper.active .box {transform: translateX(50vw);}
 .slide-wrapper.active .img-front {transform: translateX(50vw);}
+
+
