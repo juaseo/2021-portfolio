@@ -6,12 +6,14 @@ var my = 0;
 var speed = 0.15;
 var $picWrapper = $('.char-bg');
 var $picWrap = $('.char')
-var $box = $('.box')
+var $box = $('.box-move')
 var winHei = 0;
 
 
 /*************** 사용자 함수 *****************/
 // slideslide();
+
+new WOW().init();
 
 /*  main  */
 $(window).mousemove(function (e) {
