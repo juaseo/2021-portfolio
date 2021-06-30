@@ -39,10 +39,10 @@ function onNext() {
 }
 
 function changeSlide() {
-	console.log(slide[now])
+	console.log(slide[now].src);
 	$('.slide-wrapper').find('.title').text(slide[now].title);
 	$('.slide-wrapper').find('.content').text(slide[now].cont);
-	$('.slide-wrapper').find('.img-back').attr('src', slide[now].src);
-	$('.slide-wrapper').find('.img-front').attr('src', slide[now].src);
+	$('.slide-wrapper').find('.img-back img').attr('src', slide[now].src);
+	$('.slide-wrapper').find('.img-front img').attr('src', slide[now].src);
 	$('.slide-wrapper').find('.box').css('background-color', slide[now].box);
 }

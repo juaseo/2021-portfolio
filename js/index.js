@@ -13,7 +13,9 @@ var winHei = 0;
 /*************** 사용자 함수 *****************/
 // slideslide();
 
-new WOW().init();
+new WOW({
+	offset: 300
+}).init();
 
 /*  main  */
 $(window).mousemove(function (e) {
@@ -116,11 +118,12 @@ function onNext() {
 }
 
 function changeSlide() {
-	console.log(slide[now])
+	console.log(slide[now].src)
 	$('.slide-wrapper').find('.title-sub').text(slide[now].title);
 	$('.slide-wrapper').find('.cont-sub').text(slide[now].cont);
-	$('.slide-wrapper').find('.img-back').attr('src', slide[now].src2);
-	$('.slide-wrapper').find('.img-front').attr('src', slide[now].src);
+	
+	$('.slide-wrapper').find('.img-back img').attr('src', slide[now].src2);
+	$('.slide-wrapper').find('.img-front img').attr('src', slide[now].src);
 	$('.slide-wrapper').find('a').attr('href', slide[now].href);
 	$('.slide-wrapper').find('.lt-wrap a').attr('href', slide[now].href);
 	$('.slide-wrapper').find('.nemo').css('background-color', slide[now].box);
