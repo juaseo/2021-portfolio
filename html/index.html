@@ -14,11 +14,9 @@
 	<link rel="stylesheet" href="../css/slick-theme.css">
   <script src="../js/jquery-3.6.0.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/slick.min.js"></script>
-  <script src="../js/util.js"></script>
+  <script src="../js/jquery.touchSwipe.min.js"></script>
 
 </head>
-
 <body>
   <section class="main-section section-wrapper"  id="main">
     <ul class="menu-wrapper">
@@ -85,7 +83,17 @@
   <section class="about-section section-wrapper" id="about">
     <div class="section section2">
       <div class="about-wrapper">
-        <div class="about-bg"></div>
+        <div class="about-bg">
+          <div class="about-me">
+            <div class="box"></div>
+            <h2>서주아</h2>
+            <p>26세 / 여</p>
+            <p>서울 금천구 거주</p>
+          </div>
+          <div class="about-skil">
+
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -98,31 +106,31 @@
       <li>PROJECT</li>
       <li>CONTACT</li>
     </ul>
-    <div class="slide-wrapper">
-      <div class="title-wrapper">
-        <div class="moving-stage title-sub">
-          <h2 class="moving-box"></h2>
+    
+    <div class="slide-wrapper ">
+      <div class="bt-prev bt-slide bi bi-chevron-left"></div>
+      <div class="bt-next bt-slide bi bi-chevron-right"></div>
+      <div class="lt-wrap">
+        <h2 class="title-sub">Furniture</h2>
+        <p class="cont-sub">군영과 안고, 품으며, 그들의 청춘은 많이 이것이다. 자신과 위하여, 얼마나 뭇 황금시대의 투명하되 것이다.
+          거친 시들어 방황하였으며, 같이, 것은 없으면 사랑의 칼이다.
+          <br> 끝에 가치 피가 듣기만 청춘의 이것이야말로 할지니, 인생에 곳으로 것이다. 같지 인간이 풀이 할지라도 품고 웅대한 그것은 이상은 평화스러운 것이다.
+        </p>
+        <a href="http://naver.com" target="_blank" ><button class="bt-show">SHOW</button></a>
+      </div>
+      <div class="rt-wrap">
+        <div class="img-back">
+          <img src="../img/01.png" alt="" class="img">
         </div>
-        <div class="moving-stage cont-sub">
-          <p class="moving-box"></p>
-        </div>
-        <div class="moving-stage bt">
-          <i class="moving-box">SHOW</i>
+        <div class="nemo"></div>
+        <div class="img-front">
+          <div class="img-wrap">
+            <a href="http://naver.com" target="_blank" >
+              <img src="../img/allpage.jpg" alt="" class="img w-100">
+            </a>
+          </div>
         </div>
       </div>
-      <ul class="img-wrapper">
-        <li class="moving-stage img-bg">
-          <img src="../img/01.png" alt="뒤" class="moving-box slide-front w-100">
-        </li>
-        <div class="moving-stage">
-          <li class="mpving-box box2"></li>
-        </div>
-        <li class="moving-stage img-wrap">
-          <img src="../img/01.png" alt="앞" class="moving-box slide-back w-100">
-        </li>
-      </ul>
-      <i class="bt-prev bi bi-chevron-left"></i>
-      <i class="bt-next bi bi-chevron-right"></i>
     </div>
   </section>
 
@@ -135,9 +143,5 @@
   <section class="contact-section section-wrapper" id="contact">
 
   </section>
-
-
-
   <script src="../js/index.js"></script>
 </body>
-</html>
