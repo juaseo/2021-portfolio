@@ -14,7 +14,7 @@ var winHei = 0;
 // slideslide();
 
 new WOW({
-	offset: 300
+	offset: 350
 }).init();
 
 /*  main  */
