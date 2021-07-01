@@ -118,7 +118,9 @@ function onNext() {
 }
 
 function changeSlide() {
-	console.log(slide[now].src)
+	var hei = $('.slide-wrapper').outerHeight();
+	console.log(hei);
+	$('.slide-wrapper').css('height', hei+'px')
 	$('.slide-wrapper').find('.title-sub').text(slide[now].title);
 	$('.slide-wrapper').find('.cont-sub').text(slide[now].cont);
 	
