@@ -98,7 +98,8 @@ body::-webkit-scrollbar { display:none;}
 .slide-wrapper > .lt-wrap a .bt-show { display: block; padding: .5em 1.25em; background-color: #328bff; color: #fff; border-radius: 4px;}
 .slide-wrapper > .lt-wrap a .bt-show:hover {background-color: #fff; color: #328bff;}
 
-.slide-wrapper > .rt-wrap .img-back {width: 70%; transform: translate(0%, 10%); position: relative; z-index: 1;}
+.slide-wrapper > .rt-wrap .img-back {width: 70%; transform: translate(0%, 10%); position: relative; z-index: 1; border: 1px solid red; overflow: hidden;}
+.slide-wrapper > .rt-wrap .img-back .moving-img {width: 100%; position: absolute; top: 0; left: 0; transition: all 10s;}
 .slide-wrapper > .rt-wrap .nemo {padding: 17%; position: absolute; bottom: 0%; right: 20%; transform: translate(0, -40%) rotate(30deg); background-color: red; z-index: 2;}
 .slide-wrapper > .rt-wrap .img-front {width: 50%; margin-left: auto; position: relative; transform: translate(10%, -10%); z-index: 3;}
 .slide-wrapper > .rt-wrap .img-front .img-back {transition: all 5s; position: relative; overflow: hidden;} 
