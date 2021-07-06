@@ -14,7 +14,7 @@ var winHei = 0;
 // slideslide();
 
 new WOW({
-	offset: 150
+	offset: 250
 }).init();
 
 /*  main  */
@@ -124,7 +124,7 @@ function changeSlide() {
 	$('.slide-wrapper').find('.title-sub').text(slide[now].title);
 	$('.slide-wrapper').find('.cont-sub').text(slide[now].cont);
 	
-	$('.slide-wrapper').find('.img-back img').attr('src', slide[now].src2);
+	$('.slide-wrapper').find('.img-back moving-img').attr('src', slide[now].src2);
 	$('.slide-wrapper').find('.img-front img').attr('src', slide[now].src);
 	$('.slide-wrapper').find('a').attr('href', slide[now].href);
 	$('.slide-wrapper').find('.lt-wrap a').attr('href', slide[now].href);
